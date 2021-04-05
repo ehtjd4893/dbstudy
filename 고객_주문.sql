@@ -1,22 +1,22 @@
-CREATE TABLE °í°´ -- ºÎ¸ðÅ×ÀÌºí
+CREATE TABLE ê³ ê° -- ë¶€ëª¨í…Œì´ë¸”
 ( 
-    °í°´¾ÆÀÌµð VARCHAR2(30) PRIMARY KEY,
-    °í°´ÀÌ¸§ VARCHAR2(30),
-    ³ªÀÌ NUMBER(3),
-    µî±Þ CHAR(1),
-    Á÷¾÷ VARCHAR2(5),
-    Àû¸³±Ý NUMBER(7)
+    ê³ ê°ì•„ì´ë”” VARCHAR2(30) PRIMARY KEY,
+    ê³ ê°ì´ë¦„ VARCHAR2(30),
+    ë‚˜ì´ NUMBER(3),
+    ë“±ê¸‰ CHAR(1),
+    ì§ì—… VARCHAR2(5),
+    ì ë¦½ê¸ˆ NUMBER(7)
 );
 
-CREATE TABLE ÁÖ¹® -- ÀÚ½ÄÅ×ÀÌºí
+CREATE TABLE ì£¼ë¬¸ -- ìžì‹í…Œì´ë¸”
 (
-    ÁÖ¹®¹øÈ£ NUMBER PRIMARY KEY,
-    ÁÖ¹®°í°´ VARCHAR2(30) REFERENCES °í°´(°í°´¾ÆÀÌµð),
-    -- ¿Ü·¡Å°(°í°´Å×ÀÌºíÀÇ °í°´¾ÆÀÌµð Ä®·³ ÂüÁ¶), ¿Ü·¡Å°´Â ÇÑ Å×ÀÌºí¿¡ ¿©·¯°³ °¡´É
-    ÁÖ¹®Á¦Ç° VARCHAR2(20),
-    ¼ö·® NUMBER,
-    ´Ü°¡ NUMBER,
-    ÁÖ¹®ÀÏÀÚ DATE
+    ì£¼ë¬¸ë²ˆí˜¸ NUMBER PRIMARY KEY,
+    ì£¼ë¬¸ê³ ê° VARCHAR2(30) REFERENCES ê³ ê°(ê³ ê°ì•„ì´ë””),
+    -- ì™¸ëž˜í‚¤(ê³ ê°í…Œì´ë¸”ì˜ ê³ ê°ì•„ì´ë”” ì¹¼ëŸ¼ ì°¸ì¡°), ì™¸ëž˜í‚¤ëŠ” í•œ í…Œì´ë¸”ì— ì—¬ëŸ¬ê°œ ê°€ëŠ¥
+    ì£¼ë¬¸ì œí’ˆ VARCHAR2(20),
+    ìˆ˜ëŸ‰ NUMBER,
+    ë‹¨ê°€ NUMBER,
+    ì£¼ë¬¸ì¼ìž DATE
 );
 
-DROP TABLE °í°´; -- ºÎ¸ð ¸ÕÀú Á×ÀÏ ¼ö ¾øÀ½.
+DROP TABLE ê³ ê°; -- ë¶€ëª¨ ë¨¼ì € ì£½ì¼ ìˆ˜ ì—†ìŒ.
