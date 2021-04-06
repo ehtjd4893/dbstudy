@@ -35,24 +35,25 @@ DROP TABLE student;
 
 
 CREATE TABLE member(
-    member_no NUMBER PRIMARY KEY,
+    member_no NUMBER, --PRIMARY KEY,
     member_id VARCHAR2(30),
     member_pw VARCHAR2(30),
     member_name VARCHAR2(15),
     member_email VARCHAR2(50),
     member_phone VARCHAR2(15),
-    member_date DATE
-    --PRIMARY KEY(member_no)
+    member_date DATE,
+    PRIMARY KEY(member_no)
 );
 
 CREATE TABLE board(
-    board_no NUMBER PRIMARY KEY,
+    board_no NUMBER,-- PRIMARY KEY,
     board_title VARCHAR2(1000),
     board_content VARCHAR2(4000),
     board_hit NUMBER,
-    member_no NUMBER REFERENCES member(member_no),
-    board_date DATE
-    -- FOREIGN KEY(member_no) REFERENCES member(member_no)
+    member_no NUMBER, --REFERENCES member(member_no),
+    board_date DATE,
+    PRIMARY KEY(board_no),
+    FOREIGN KEY(member_no) REFERENCES member(member_no)
 );
 
 

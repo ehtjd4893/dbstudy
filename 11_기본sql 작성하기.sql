@@ -2,9 +2,9 @@
 CREATE TABLE bank(
     bank_code VARCHAR2(20),-- PRIMARY KEY,
     bank_name VARCHAR2(30)
-   -- CONSTRAINT bank_pk PRIMARY KEY(bank_code) -- 테이블명_pk 
+    --CONSTRAINT bank_pk PRIMARY KEY(bank_code) -- 테이블명_pk 
 );
-
+DROP TABLE BANK;
 -- 테이블 변경
 -- ALTER TABLE 테이블명 (ADD, REMOVE, MODIFY) 등
 ALTER TABLE bank ADD CONSTRAINT bank_pk PRIMARY KEY(bank_code);

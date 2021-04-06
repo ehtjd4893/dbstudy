@@ -19,4 +19,4 @@ CREATE TABLE 주문 -- 자식테이블
     주문일자 DATE
 );
 
-DROP TABLE 고객; -- 부모 먼저 죽일 수 없음.
+DROP TABLE 고객; -- 부모 먼저 죽일 수 없음. 무조건 자식(주문)테이블 먼저, Foreign key 때문에,
