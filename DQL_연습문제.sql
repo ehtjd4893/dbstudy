@@ -155,13 +155,13 @@ SELECT
 
 -- 9. 주문한 이력이 없는 고객의 이름을 조회하시오.
 select 
-    t.customer_id,
-    t.customer_name
-  FROM customer t
- WHERE t.customer_id NOT IN (SELECT
-                                c.customer_id
-                              FROM customer c INNER JOIN orders o
-                                ON c.customer_id = o.customer_id);
+    c.customer_id,
+    c.customer_name
+  FROM customer c
+ WHERE c.customer_id NOT IN (SELECT
+                                o.customer_id
+                              FROM orders o);
+                          
 
 -- 10. 고객별로 총 구매횟수를 조회하시오.
 SELECT 
