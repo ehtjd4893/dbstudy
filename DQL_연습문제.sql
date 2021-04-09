@@ -167,11 +167,19 @@ select
 SELECT 
     x.customer_name,
     x.customer_id,
-    y.구매횟수
-  FROM customer x INNER JOIN (SELECT c.customer_id, count(*) AS 구매횟수 
+    NVL(y.구매횟수,0)
+  FROM customer x LEFT OUTER JOIN (SELECT c.customer_id, count(*) AS 구매횟수 
                                 FROM customer c INNER JOIN orders o
                                   ON c.customer_id = o.customer_id
                             GROUP BY c.customer_id) y
     ON x.customer_id = y.customer_id
  ORDER BY x.customer_id;
 
+
+SELECT 
+    c.customer_id,
+    c.customer_name,
+    COUNT(o.order_id) as 구매횟수
+  FROM customer c LEFT OUTER JOIN orders o
+    ON c.customer_id = o.customer_id
+ GROUP BY c.customer_name, c.customer_id;
