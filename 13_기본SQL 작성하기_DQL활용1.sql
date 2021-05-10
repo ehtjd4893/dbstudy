@@ -1,5 +1,5 @@
 ﻿------- << employees 테이블 >> --
-
+-------------------------------------
 -- 1. 전체 사원의 모든 칼럼을 조회한다.
 DESC employees
 SELECT employee_id, first_name, last_name, email, phone_number from employees ;
